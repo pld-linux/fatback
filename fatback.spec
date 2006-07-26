@@ -8,7 +8,7 @@ License:	GPL v2
 Group:		Applications
 Source0:	http://dl.sourceforge.net/fatback/%{name}-%{version}.tar.gz
 # Source0-md5:	4f1beb13670a7eff5b66cff84e5fd42a
-URL:		http://fatback.sf.net/
+URL:		http://fatback.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	flex
 # Trash BR for configure
