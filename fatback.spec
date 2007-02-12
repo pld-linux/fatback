@@ -1,5 +1,5 @@
 Summary:	A forensic tool for recovering files from FAT file systems
-Summary(pl.UTF-8):   Narzędzie do odzyskiwania plików z partycji FAT
+Summary(pl.UTF-8):	Narzędzie do odzyskiwania plików z partycji FAT
 Name:		fatback
 Version:	1.3
 Release:	1
