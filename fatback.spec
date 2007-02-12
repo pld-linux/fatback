@@ -1,5 +1,5 @@
 Summary:	A forensic tool for recovering files from FAT file systems
-Summary(pl):	Narz阣zie do odzyskiwania plik體 z partycji FAT
+Summary(pl.UTF-8):   Narz臋dzie do odzyskiwania plik贸w z partycji FAT
 Name:		fatback
 Version:	1.3
 Release:	1
@@ -17,9 +17,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Fatback is a tool for undeleting files from FAT file systems.
 
-%description -l pl
-Fatback jest narz阣ziem do odzyskiwania usuni阾ych plik體 z system體
-plik體 FAT.
+%description -l pl.UTF-8
+Fatback jest narz臋dziem do odzyskiwania usuni臋tych plik贸w z system贸w
+plik贸w FAT.
 
 %prep
 %setup -q
