@@ -2,13 +2,15 @@ Summary:	A forensic tool for recovering files from FAT file systems
 Summary(pl.UTF-8):	Narzędzie do odzyskiwania plików z partycji FAT
 Name:		fatback
 Version:	1.3
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications
 Source0:	http://dl.sourceforge.net/fatback/%{name}-%{version}.tar.gz
 # Source0-md5:	4f1beb13670a7eff5b66cff84e5fd42a
+Patch0:		%{name}-build.patch
 URL:		http://fatback.sourceforge.net/
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	flex
 # Trash BR for configure
 BuildRequires:	libstdc++-devel
@@ -23,11 +25,16 @@ plików FAT.
 
 %prep
 %setup -q
+%patch -P0 -p1
 
 %build
+cp -f /usr/share/automake/config.sub /usr/share/automake/config.guess .
 %{__autoconf}
-%configure
-%{__make}
+%configure2_13
+%{__make} \
+	CFLAGS="%{rpmcflags}" \
+	CPPFLAGS="%{rpmcppflags} -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE" \
+	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
